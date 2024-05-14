@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs - Recruitment System</title>
+    <link rel="stylesheet" href="applynow.css">
+</head>
+<body>
+
+<header>
+    <h1>Recruitment System</h1>
+</header>
+
+<section class="jobs">
+    <h2>Featured Jobs</h2>
+    <div class="job">
+        <h3>Software Engineer</h3>
+        <p>Location: Anywhere</p>
+        <p>Description: We are seeking a talented software engineer to join our team.</p>
+        <a href="#" class="apply-btn" onclick="showApplicationForm('Software Engineer')">Apply Now</a>
+    </div>
+    <div class="job">
+        <h3>Marketing Manager</h3>
+        <p>Location: Remote</p>
+        <p>Description: We are looking for a skilled marketing manager to lead our marketing efforts.</p>
+        <a href="#" class="apply-btn" onclick="showApplicationForm('Marketing Manager')">Apply Now</a>
+    </div>
+</section>
+
+<div id="applicationForm" class="hidden">
+    <h2>Job Application Form</h2>
+    <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="age">Age:</label><br>
+        <input type="text" id="age" name="age"><br>
+
+        <label for="gender">Gender:</label><br>
+        <input type="text" id="gender" name="gender"><br>
+
+        <label for="job">Job Preference:</label><br>
+        <input type="text" id="job" name="job" readonly><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2024 Recruitment System. All rights reserved.</p>
+</footer>
+
+<script>
+    function showApplicationForm(jobTitle) {
+        document.getElementById('job').value = jobTitle;
+        document.getElementById('applicationForm').classList.remove('hidden');
+    }
+</script>
+
+</body>
+</html>
